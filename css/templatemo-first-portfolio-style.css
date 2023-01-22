@@ -13,12 +13,12 @@ https://templatemo.com/tm-578-first-portfolio
 :root {
   --white-color:                  #03001C;
   --primary-color:                #5B8FB9;
-  --secondary-color:              #50fd00;
-  --section-bg-color:             #6F1AB6;
-  --dark-color:                   #000000;
+  --secondary-color:              #801c07;
+  --section-bg-color:             #f5a688;
+  --dark-color:                   #1c241c;
   --p-color:                      #B6EADA;
-  --border-color:                 #76f50d;
-  --featured-border-color:        #76f50d;
+  --border-color:                 #fc3c04;
+  --featured-border-color:        #fc3c04;
 
   --body-font-family:             'DM Sans', sans-serif;
 
@@ -312,11 +312,10 @@ h3.pt-2.mb-3{
   color: var(--featured-border-color);
 }
 .is-sticky .navbar .container {
-  background: rgba(111, 26, 182, 0.7);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 1rem 3rem rgb(0 0 0 / 18%);
+background: rgba(245, 166, 136, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12.5px);
+  -webkit-backdrop-filter: blur(12.5px);
 }
 
 .is-sticky .navbar-brand,
