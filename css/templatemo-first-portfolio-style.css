@@ -6,7 +6,7 @@ https://templatemo.com/tm-578-first-portfolio
 
 */
 
-
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@200;300;400;500;600;700;800;900&display=swap');
 /*---------------------------------------
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
@@ -20,7 +20,7 @@ https://templatemo.com/tm-578-first-portfolio
   --border-color:                 #ffe9b1;
   --featured-border-color:        #ffffff;
 
-  --body-font-family:             'DM Sans', sans-serif;
+  --body-font-family: 'Sofia Sans', sans-serif;
 
   --h1-font-size:                 62px;
   --h2-font-size:                 48px;
