@@ -103,6 +103,20 @@
 
                                 <h2 class="mb-4">Easy Come, Easy Go</h2>
                                 <p class="mb-4"><a class="custom-btn btn custom-link" href="#section_2">Let's begin</a></p>
+                        <div id="music-player">
+                            <div id="cover"></div>
+                            <div id="album-cover"></div>
+                            <div id="song-title"></div>
+                            <div id="controls">
+                                <button id="play-button"></button>
+                                <div id="progress-bar">
+                                    <div id="progress"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
                             </div>
                         </div>
 
@@ -597,7 +611,39 @@
                 </div>
             </div>
         </footer>
+        <script>
+           var audio = new Audio('cowboy.mp3');
+            var playButton = document.getElementById('play-button');
+            var progressBar = document.getElementById('progress-bar');
+            var progress = document.getElementById('progress');
+            var albumCover = document.getElementById('album-cover');
 
+            playButton.addEventListener('click', function () {
+                if (audio.paused) {
+                    audio.play();
+                    playButton.classList.add('playing');
+                    albumCover.classList.add('show');
+                } else {
+                    audio.pause();
+                    playButton.classList.remove('playing');
+                    albumCover.classList.remove('show');
+                }
+            });
+
+            audio.addEventListener('timeupdate', function () {
+                var percent = (audio.currentTime / audio.duration) * 100;
+                progress.style.width = percent + '%';
+            });
+
+            progressBar.addEventListener('click', function (e) {
+                var percent = e.offsetX / this.offsetWidth;
+                audio.currentTime = percent * audio.duration;
+            });
+
+
+                
+
+        </script>
         <!-- JAVASCRIPT FILES -->
         <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
         <script src="js/jquery.min.js"></script>
