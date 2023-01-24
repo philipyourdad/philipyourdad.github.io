@@ -18,7 +18,7 @@ https://templatemo.com/tm-578-first-portfolio
   --dark-color:                   #1c241c;
   --p-color:                      #ffffff;
   --border-color:                 #ffe9b1;
-  --featured-border-color:        #7743db;
+  --featured-border-color:        #ffffff;
 
   --body-font-family:             'DM Sans', sans-serif;
 
@@ -104,7 +104,7 @@ p {
 }
 
 ul li {
-  color: var(--featured-border-color);
+  color: var(--dark-color);
   font-size: var(--p-font-size);
   font-weight: var(--font-weight-normal);
 }
@@ -233,7 +233,7 @@ h3.pt-2.mb-3{
 }
 
 .is-sticky .navbar-icon {
-  background: var(--secondary-color);
+  background: var(--p-color);
   color: var(--white-color);
 }
 
@@ -329,7 +329,7 @@ background: rgba(119, 67, 219, 0.7);
 }
 
 .is-sticky .navbar .custom-btn {
-  color: var(--secondary-color);
+  color: var(--p-color);
 }
 
 
@@ -394,12 +394,12 @@ background: rgba(119, 67, 219, 0.7);
 
 .navbar-nav .nav-link.active::after, 
 .navbar-nav .nav-link:hover::after {
-  background: var(--dark-color);
+  background: var(--white-color);
 }
 
 .navbar-nav .nav-link.active, 
 .navbar-nav .nav-link:hover {
-  color: var(--dark-color);
+  color: var(--white-color);
 }
 
 .navbar-toggler {
@@ -1094,7 +1094,7 @@ h3.mb-0{
   }
 
   .navbar-nav .nav-link {
-    color: var(--p-color);
+    color: var(--white-color);
     padding-top: 10px;
     padding-bottom: 10px;
   }
