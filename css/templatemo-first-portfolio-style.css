@@ -11,14 +11,14 @@ https://templatemo.com/tm-578-first-portfolio
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
 :root {
-  --white-color:                  #03001C;
+  --white-color:                  #332941;
   --primary-color:                #5B8FB9;
-  --secondary-color:              #801c07;
-  --section-bg-color:             #f5a688;
+  --secondary-color:              #3b3486;
+  --section-bg-color:             #7743db;
   --dark-color:                   #1c241c;
-  --p-color:                      #B6EADA;
-  --border-color:                 #fc3c04;
-  --featured-border-color:        #fc3c04;
+  --p-color:                      #ffffff;
+  --border-color:                 #ffe9b1;
+  --featured-border-color:        #7743db;
 
   --body-font-family:             'DM Sans', sans-serif;
 
@@ -312,10 +312,11 @@ h3.pt-2.mb-3{
   color: var(--featured-border-color);
 }
 .is-sticky .navbar .container {
-background: rgba(245, 166, 136, 0.6);
+background: rgba(119, 67, 219, 0.7);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(12.5px);
-  -webkit-backdrop-filter: blur(12.5px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
 }
 
 .is-sticky .navbar-brand,
@@ -353,6 +354,7 @@ background: rgba(245, 166, 136, 0.6);
 .navbar-brand {
   font-size: var(--h4-font-size);
   font-weight: var(--font-weight-bold);
+  
 }
 
 .navbar-brand,
@@ -365,7 +367,7 @@ background: rgba(245, 166, 136, 0.6);
   padding-left: 0;
   margin-right: 20px;
   margin-left: 20px;
-  
+  color: var(--p-color);
 }
 
 .navbar-nav .nav-link {
@@ -488,8 +490,8 @@ background: rgba(245, 166, 136, 0.6);
 
 .hero-title,
 .hero h2 {
-  color: var(--featured-border-color);
-  background: var(--white-color);
+  color: var(--white-color);
+  background: var(--section-bg-color);
   box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
   border-radius: var(--border-radius-small);
   display: inline-block;
