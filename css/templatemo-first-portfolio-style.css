@@ -411,7 +411,7 @@ h3.pt-2.mb-3{
   color: var(--featured-border-color);
 }
 .is-sticky .navbar .container {
-background: rgba(119, 67, 219, 0.7);
+background: var(--section-bg-color);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
