@@ -47,9 +47,9 @@
                 <a href="index.html" class="navbar-brand mx-auto mx-lg-0">Benihime</a>
 
                 <div class="d-flex align-items-center d-lg-none">
-                    <i class="navbar-icon bi-moon-fill"></i>
+                    
                     <a class="custom-btn btn" href="#section_5">
-                        09155816340
+                        <!-- 09155816340 -->
                     </a>
                 </div>
 
@@ -75,9 +75,18 @@
                             <a class="nav-link click-scroll" href="#section_5">Contact</a>
                         </li>
                     </ul>
-
+                    <div class="toggle-button-cover">
+                        <div class="button-cover">
+                            <div class="button b2" id="switch">
+                                <ion-icon name="moon"></ion-icon>
+                                <span></span>
+                            </div>
+                            <div class="layer"></div>
+                        </div>
+                    </div>
+                    </div>
                     <div class="d-lg-flex align-items-center d-none ms-auto">
-                        <i class="navbar-icon bi bi-moon-fill"></i>
+                       
                         <!-- <a class="custom-btn btn" href="#section_5">
                             09155816340
                         </a> -->
@@ -103,22 +112,22 @@
 
                                 <h2 class="mb-4">Easy Come, Easy Go</h2>
                                 <p class="mb-4"><a class="custom-btn btn custom-link" href="#section_2">Let's begin</a></p>
-                        <div id="music-player">
+                            <div id="music-player">
+                            
                             <div id="cover"></div>
                             <div id="album-cover"></div>
                             <div id="song-title"></div>
                             <div id="controls">
+                                <span id="current-time"></span>
+                                <!-- <span id="duration"></span> -->
                                 <button id="play-button"></button>
                                 <div id="progress-bar">
-                                    <div id="progress"></div>
+                                    <div id="progress"></div>       
                                 </div>
                             </div>
                         </div>
-
-
-
-                            </div>
-                        </div>
+                    </div>
+                </div>
 
                         <div class="col-lg-5 col-12 position-relative">
                             <div class="hero-image-wrap"></div>
@@ -612,11 +621,13 @@
             </div>
         </footer>
         <script>
-           var audio = new Audio('cowboy.mp3');
+          var audio = new Audio('cowboy.mp3');
             var playButton = document.getElementById('play-button');
             var progressBar = document.getElementById('progress-bar');
             var progress = document.getElementById('progress');
             var albumCover = document.getElementById('album-cover');
+            var currentTime = document.getElementById('current-time');
+            var duration = document.getElementById('duration');
 
             playButton.addEventListener('click', function () {
                 if (audio.paused) {
@@ -633,6 +644,7 @@
             audio.addEventListener('timeupdate', function () {
                 var percent = (audio.currentTime / audio.duration) * 100;
                 progress.style.width = percent + '%';
+                currentTime.textContent = formatTime(audio.currentTime);
             });
 
             progressBar.addEventListener('click', function (e) {
@@ -640,11 +652,45 @@
                 audio.currentTime = percent * audio.duration;
             });
 
+            audio.addEventListener('loadedmetadata', function () {
+                duration.textContent = formatTime(audio.duration);
+            });
 
+            function formatTime(time) {
+                var minutes = Math.floor(time / 60);
+                var seconds = Math.floor(time % 60);
+                if (seconds < 10) {
+                    seconds = '0' + seconds;
+                }
+                return minutes + ':' + seconds;
+            }
+
+
+              //darkmode
+                const toggle = document.getElementById("switch");
+                let isDarkMode = false;
+                toggle.addEventListener("click", () => {
+                    isDarkMode = !isDarkMode;
+                    document.body.classList.toggle("darkmode", isDarkMode);
+
+                    // Load the appropriate image
+                    const image = new Image();
+                    if (isDarkMode) {
+                        image.src = "/assets/img/kon.jpg";
+                        toggle.innerHTML = '<ion-icon name="sunny-sharp"></ion-icon>';
+                    } else {
+                        image.src = "/assets/img/wiws.jpg";
+                        toggle.innerHTML = '<ion-icon name="moon"></ion-icon>';
+                    }
+                    // Set the body's background image to the new image
+                    document.body.style.backgroundImage = `url(${image.src})`;
+                });
                 
 
         </script>
         <!-- JAVASCRIPT FILES -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
